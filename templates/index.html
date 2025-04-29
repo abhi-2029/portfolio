@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Ranjan | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="home-page">
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <i class="fas fa-sun sun"></i>
+        <i class="fas fa-moon moon"></i>
+    </div>
+
+    <div id="cube-container"></div>
+    <div id="particles-js"></div>
+    
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <header>
+        <div class="container">
+            <div class="logo">AR</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <!-- <li><a href="#achievement">Achievement</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Abhishek Ranjan</h1>
+                    <h2 class="typewriter">Computer Science Engineer</h2>
+                    <p>Passionate about Data Structures, Algorithms, and building innovative solutions.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/abhishekranjan20" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/abhi-2029" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:abhisheksingh70224@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://leetcode.com/u/abhishek__ranjan/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn">Get In Touch</a>
+                        <a href="{{ url_for('static', filename='docs/Abhishek_Ranjan_CV.pdf') }}" class="btn btn-cv" target="_blank">View CV</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder">
+                        <img src="{{ url_for('static', filename='images/my-image.jpg') }}" alt="Abhishek Ranjan" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-grid">
+                        <!-- Row 1 -->
+                        <div class="skill-item">
+                            <div class="skill-logo-container">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                            </div>
+                            <span>C++</span>
+                            <div class="skill-tooltip">Advanced proficiency with STL and OOP</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-logo-container">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                            </div>
+                            <span>Python</span>
+                            <div class="skill-tooltip">Data analysis and scripting</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-logo-container">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            </div>
+                            <span>JavaScript</span>
+                            <div class="skill-tooltip">Frontend development</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-logo-container">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                            </div>
+                            <span>HTML5</span>
+                            <div class="skill-tooltip">Semantic markup</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-logo-container">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                            </div>
+                            <span>CSS3</span>
+                            <div class="skill-tooltip">Responsive design</div>
+                        </div>
+                        
+                        <!-- Row 2 -->
+                        <div class="skill-item">
+                            <div class="skill-logo-container">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy">
+                            </div>
+                            <span>NumPy</span>
+                            <div class="skill-tooltip">Numerical computing</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-logo-container">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib">
+                            </div>
+                            <span>Matplotlib</span>
+                            <div class="skill-tooltip">Data visualization</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-logo-container">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas">
+                            </div>
+                            <span>Pandas</span>
+                            <div class="skill-tooltip">Data manipulation</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-logo-container">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask">
+                            </div>
+                            <span>Flask</span>
+                            <div class="skill-tooltip">Web development</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-logo-container">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                            </div>
+                            <span>Git</span>
+                            <div class="skill-tooltip">Version control</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jun 2024 - Jul 2024</div>
+                        <div class="timeline-content">
+                            <h3>Board Infinity - Summer Training</h3>
+                            <ul>
+                                <li>Learned and applied Object-Oriented Programming (OOP) principles in C++</li>
+                                <li>Gained expertise in advanced array and Data Structures & Algorithms (DSA)</li>
+                                <li>Developed a Library Management System in C++ with structured and scalable design</li>
+                                <li>Optimized data structures for efficient book records, user accounts, and transactions</li>
+                                <li>Implemented file handling for persistent storage and seamless data retrieval</li>
+                            </ul>
+                            <button class="btn view-certificate" data-certificate="board-infinity" onclick="window.open('https://drive.google.com/file/d/1vQjyZdEH9lj8gh8HrCu7tatMA-LluDJL/view?usp=drive_link', '_blank')">View Certificate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-card-inner">
+                            <div class="project-card-front">
+                                <h3>Smart Cart – AI-Powered Personalized E-Commerce</h3>
+                                <p class="project-date">Jan 2025 - Present</p>
+                                <ul>
+                                    <li>Led a competitive project for "Smart Shopping: Data and AI for Personalized E-Commerce" challenge</li>
+                                    <li>Conceptualized and built Smart Cart, an intelligent e-commerce platform powered by multi-agent system</li>
+                                    <li>Crafted a fully responsive, visually engaging web app featuring animated UI, interactive dashboards</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                    <span>Python</span>
+                                    <span>Flask</span>
+                                    <span>SQLite</span>
+                                </div>
+                            </div>
+                            <div class="project-card-back">
+                                <h3>Explore Smart Cart</h3>
+                                <p>AI-driven e-commerce platform with personalized recommendations.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/abhi-2029/smart-cart" class="btn" target="_blank">View on GitHub</a>
+                                    <a href="YOUR_SMART_CART_DEMO_LINK" class="btn btn-demo" target="_blank">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card-inner">
+                            <div class="project-card-front">
+                                <h3>Power BI Dashboard – Food Impact on Indians</h3>
+                                <p class="project-date">Mar 2025 - Apr 2025</p>
+                                <ul>
+                                    <li>Designed an interactive dashboard in Power BI to analyze regional food habits influence on health</li>
+                                    <li>Integrated demographic and nutritional datasets, uncovering significant correlations</li>
+                                    <li>Used custom visuals, thematic elements, and responsive layout techniques</li>
+                                    <li>Provided actionable insights about regional food behaviors</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span>Power BI</span>
+                                    <span>DAX</span>
+                                    <span>Power Query</span>
+                                    <span>Custom Visuals</span>
+                                </div>
+                            </div>
+                            <div class="project-card-back">
+                                <h3>Explore Dashboard</h3>
+                                <p>Interactive Power BI dashboard for health and nutrition insights.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/abhi-2029/food-impact-dashboard" class="btn" target="_blank">View Details</a>
+                                    <a href="YOUR_POWER_BI_DASHBOARD_LINK" class="btn btn-demo" target="_blank">View Dashboard</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <h3>Lovely Professional University</h3>
+                        <p class="degree">Bachelor of Technology - Computer Science and Engineering</p>
+                        <p class="date">Aug 2022 - Present</p>
+                        <p class="grade">CGPA: 7.0</p>
+                        <button class="btn view-transcript" onclick="window.open('YOUR_LPU_TRANSCRIPT_LINK', '_blank')">View Transcript</button>
+                    </div>
+                    <div class="education-card">
+                        <h3>Shanti Niketan Jubilee School</h3>
+                        <p class="degree">Intermediate</p>
+                        <p class="date">Apr 2020 - Mar 2021</p>
+                        <p class="grade">Percentage: 85%</p>
+                    </div>
+                    <div class="education-card">
+                        <h3>CS DAV Public School</h3>
+                        <p class="degree">Matriculation</p>
+                        <p class="date">Apr 2018 - Mar 2019</p>
+                        <p class="grade">Percentage: 93.5%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="section">
+            <div class="container">
+                <h2 class="section-title">Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card" data-modal="modal1">
+                        <i class="fas fa-star"></i>
+                        <h3>HackerRank</h3>
+                        <p>5-star ratings in C++, Python and SQL</p>
+                        <div class="achievement-badge">
+                            <span>Verified</span>
+                        </div>
+                    </div>
+                    <div class="achievement-card" data-modal="modal2">
+                        <i class="fas fa-trophy"></i>
+                        <h3>GeeksforGeeks</h3>
+                        <p>Global rank of 6931 in C++ with DSA Contest among 1,00,000+ participants</p>
+                        <div class="achievement-badge">
+                            <span>Top 1%</span>
+                        </div>
+                    </div>
+                    <div class="achievement-card" data-modal="modal3">
+                        <i class="fas fa-medal"></i>
+                        <h3>English Quiz Competition</h3>
+                        <p>Runner-up in University English Quiz Competition (LPU, 2024)</p>
+                        <div class="achievement-badge">
+                            <span>Academic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Achievement Modals -->
+            <div id="modal1" class="achievement-modal">
+                <div class="modal-content">
+                    <i class="fas fa-star fa-3x" style="color: #f1c40f; margin-bottom: 15px;"></i>
+                    <h3>HackerRank Achievement</h3>
+                    <p>Earned 5-star ratings in C++, Python, and SQL through consistent problem-solving and coding challenges. Demonstrated proficiency in algorithms, data structures, and database concepts.</p>
+                    <div class="achievement-proof">
+                        <a href="YOUR_HACKERRANK_CERTIFICATE_LINK" class="btn" target="_blank">View Certificate</a>
+                        <a href="https://www.hackerrank.com/profile/abhisheksingh704" class="btn" target="_blank">View Profile</a>
+                    </div>
+                    <button class="btn close-modal">Close</button>
+                </div>
+            </div>
+            <div id="modal2" class="achievement-modal">
+                <div class="modal-content">
+                    <i class="fas fa-trophy fa-3x" style="color: #e67e22; margin-bottom: 15px;"></i>
+                    <h3>GeeksforGeeks Achievement</h3>
+                    <p>Secured a global rank of 6931 in a C++ DSA contest, competing against over 100,000 participants worldwide. Showcased strong problem-solving skills and efficient coding practices.</p>
+                    <div class="achievement-proof">
+                        <a href="YOUR_GEEKSFORGEEKS_CERTIFICATE_LINK" class="btn" target="_blank">View Certificate</a>
+                        <a href="https://www.geeksforgeeks.org/user/abhishekranjan2029/?_gl=1*m9lel5*_up*MQ..*_gs*MQ..&gclid=Cj0KCQjw5azABhD1ARIsAA0WFUHohVQfZpYpfaIi4vbmjYNkEqVcEvItfBlBrRjSVBVWnWJqN8QMywwaAo7lEALw_wcB&gbraid=0AAAAAC9yBkBHNXKsNNRbxjRiJQXRisqfc" class="btn" target="_blank">View Profile</a>
+                    </div>
+                    <button class="btn close-modal">Close</button>
+                </div>
+            </div>
+            <div id="modal3" class="achievement-modal">
+                <div class="modal-content">
+                    <i class="fas fa-medal fa-3x" style="color: #95a5a6; margin-bottom: 15px;"></i>
+                    <h3>English Quiz Competition</h3>
+                    <p>Achieved runner-up position in the 2024 University English Quiz Competition at LPU, showcasing strong communication skills, vocabulary, and comprehension abilities among 50+ participants.</p>
+                    <div class="achievement-proof">
+                        <a href="YOUR_ENGLISH_QUIZ_CERTIFICATE_LINK" class="btn" target="_blank">View Certificate</a>
+                    </div>
+                    <button class="btn close-modal">Close</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates" class="section">
+            <div class="container">
+                <h2 class="section-title">Certificates</h2>
+                <div class="certificates-grid">
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Python Basic | HackerRank</h3>
+                        <p>Jan 2025</p>
+                        <a href="https://drive.google.com/file/d/1AKRKwHW78BshTHS4QYDI4YHM31Nr3k-Z/view?usp=drive_link" class="btn view-certificate-btn" target="_blank">View</a>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Mastering Data Structures and Algorithms - Board Infinity</h3>
+                        <p>Jul 2024</p>
+                        <a href="https://drive.google.com/file/d/1vQjyZdEH9lj8gh8HrCu7tatMA-LluDJL/view?usp=drive_link" class="btn view-certificate-btn" target="_blank">View</a>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Data Structures and Algorithms | Udemy</h3>
+                        <p>Feb 2024</p>
+                        <a href="https://drive.google.com/file/d/1xFfUxN-klaluX-ag_urMdsuKKexvhQb7/view?usp=drive_link" class="btn view-certificate-btn" target="_blank">View</a>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Programming in C++ - Coursera</h3>
+                        <p>Feb 2024</p>
+                        <a href="https://drive.google.com/file/d/1NLuIP7VvmAuuDDlglSWRQO7jV54Icc1C/view?usp=drive_link" class="btn view-certificate-btn" target="_blank">View</a>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Introduction to Microsoft Excel | Coursera</h3>
+                        <p>Dec 2022</p>
+                        <a href="https://drive.google.com/file/d/1vCLvQE3FwRJ2nDtyVgGLzURtBD35vXwv/view?usp=drive_link" class="btn view-certificate-btn" target="_blank">View</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <p>abhisheksingh70224@gmail.com</p>
+                            <button class="btn copy-btn" data-text="abhisheksingh70224@gmail.com">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-phone"></i>
+                            <p>+91-7667101673</p>
+                            <button class="btn copy-btn" data-text="+917667101673">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Phagwara, Punjab, India</p>
+                        </div>
+                        <div class="contact-social">
+                            <h3>Connect with me</h3>
+                            <div class="social-links">
+                                <a href="https://linkedin.com/in/abhishekranjan20" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/abhi-2029" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="mailto:abhisheksingh70224@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                                <a href="https://leetcode.com/u/abhishek__ranjan/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
+                                <a href="https://twitter.com/abhishekranjan" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">
+                            <span class="submit-text">Send Message</span>
+                            <span class="sending-text" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
+                        <p class="form-success">Message sent successfully!</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Abhishek Ranjan. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/abhishekranjan20" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/abhi-2029" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:abhisheksingh70224@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+</body>
+</html>
